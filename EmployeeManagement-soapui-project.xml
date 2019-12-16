@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="d1380fd0-1e24-4d16-87a3-3125f780e3f9" activeEnvironment="Default" name="EmployeeManagement" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="61e95c98-009c-4b9a-a0b1-f101890daaff" wsaVersion="NONE" name="EmployeeManagementServiceSoap12Binding" type="wsdl" bindingName="{http://sample.com/reservation/guest}EmployeeManagementServiceSoap12Binding" soapVersion="1_2" anonymous="optional" definition="http://localhost:8080/axis2/services/EmployeeManagementService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://localhost:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/</con:endpoint></con:endpoints><con:operation id="64fd1c4b-c939-4b28-8582-c011a9bf4228" isOneWay="false" action="urn:addEmployee" name="addEmployee" bindingOperationName="addEmployee" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="79d7c698-f0bd-4f1c-ac7a-22a44e603d22" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://sample.com/reservation/guest/types">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <typ:addEmployee>\r
+         <!--Optional:-->\r
+         <typ:name>?</typ:name>\r
+         <!--Optional:-->\r
+         <typ:id>?</typ:id>\r
+         <!--Optional:-->\r
+         <typ:Department>?</typ:Department>\r
+         <!--Optional:-->\r
+         <typ:age>?</typ:age>\r
+      </typ:addEmployee>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:addEmployee"/></con:call></con:operation><con:operation id="6d0fa3f3-3d4a-4ecc-bcb4-5e65db95637a" isOneWay="false" action="urn:deleteEmployee" name="deleteEmployee" bindingOperationName="deleteEmployee" type="One-Way" inputName="" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7e8e6507-6988-4557-81d7-e023dc1da9d7" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://sample.com/reservation/guest/types">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <typ:deleteEmployee>\r
+         <!--Optional:-->\r
+         <typ:employeeName>?</typ:employeeName>\r
+      </typ:deleteEmployee>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:deleteEmployee"/></con:call></con:operation><con:operation id="14158192-e654-48ca-b679-eceeb369ebe7" isOneWay="false" action="urn:getEmployeeDetails" name="getEmployeeDetails" bindingOperationName="getEmployeeDetails" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="489525f7-e820-4682-99f2-6967f3a88522" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://sample.com/reservation/guest/types">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <typ:getEmployeeDetails>\r
+         <!--Optional:-->\r
+         <typ:employeeName>?</typ:employeeName>\r
+      </typ:getEmployeeDetails>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getEmployeeDetails"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="36c37e30-da75-498a-bfe5-39540b7770a9" wsaVersion="NONE" name="EmployeeManagementServiceSoap11Binding" type="wsdl" bindingName="{http://sample.com/reservation/guest}EmployeeManagementServiceSoap11Binding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/axis2/services/EmployeeManagementService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/axis2/services/EmployeeManagementService?wsdl"><con:part><con:url>http://localhost:8080/axis2/services/EmployeeManagementService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://sample.com/reservation/guest" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://sample.com/reservation/guest/types" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://sample.com/reservation/guest" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ax21="http://exception.reservation.sample.com/xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:documentation>EmployeeManagementService</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://exception.reservation.sample.com/xsd">
+      <xs:complexType name="EmployeeManagementException">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://sample.com/reservation/guest/types" xmlns:ax22="http://exception.reservation.sample.com/xsd">
+      <xs:import namespace="http://exception.reservation.sample.com/xsd"/>
+      <xs:element name="EmployeeManagementServiceEmployeeManagementException">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="EmployeeManagementException" nillable="true" type="ax22:EmployeeManagementException"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="addEmployee">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="id" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Department" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="age" type="xs:int"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="addEmployeeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="deleteEmployee">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="employeeName" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getEmployeeDetails">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="employeeName" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getEmployeeDetailsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ns:Employee"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="Employee">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="age" type="xs:int"/>
+          <xs:element minOccurs="0" name="department" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getEmployeeDetailsRequest">
+    <wsdl:part name="parameters" element="ns:getEmployeeDetails"/>
+  </wsdl:message>
+  <wsdl:message name="getEmployeeDetailsResponse">
+    <wsdl:part name="parameters" element="ns:getEmployeeDetailsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="EmployeeManagementServiceEmployeeManagementException">
+    <wsdl:part name="parameters" element="ns:EmployeeManagementServiceEmployeeManagementException"/>
+  </wsdl:message>
+  <wsdl:message name="deleteEmployeeRequest">
+    <wsdl:part name="parameters" element="ns:deleteEmployee"/>
+  </wsdl:message>
+  <wsdl:message name="addEmployeeRequest">
+    <wsdl:part name="parameters" element="ns:addEmployee"/>
+  </wsdl:message>
+  <wsdl:message name="addEmployeeResponse">
+    <wsdl:part name="parameters" element="ns:addEmployeeResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="EmployeeManagementServicePortType">
+    <wsdl:operation name="getEmployeeDetails">
+      <wsdl:input message="tns:getEmployeeDetailsRequest" wsaw:Action="urn:getEmployeeDetails"/>
+      <wsdl:output message="tns:getEmployeeDetailsResponse" wsaw:Action="urn:getEmployeeDetailsResponse"/>
+      <wsdl:fault message="tns:EmployeeManagementServiceEmployeeManagementException" name="EmployeeManagementServiceEmployeeManagementException" wsaw:Action="urn:getEmployeeDetailsEmployeeManagementServiceEmployeeManagementException"/>
+    </wsdl:operation>
+    <wsdl:operation name="deleteEmployee">
+      <wsdl:input message="tns:deleteEmployeeRequest" wsaw:Action="urn:deleteEmployee"/>
+      <wsdl:fault message="tns:EmployeeManagementServiceEmployeeManagementException" name="EmployeeManagementServiceEmployeeManagementException" wsaw:Action="urn:deleteEmployeeEmployeeManagementServiceEmployeeManagementException"/>
+    </wsdl:operation>
+    <wsdl:operation name="addEmployee">
+      <wsdl:input message="tns:addEmployeeRequest" wsaw:Action="urn:addEmployee"/>
+      <wsdl:output message="tns:addEmployeeResponse" wsaw:Action="urn:addEmployeeResponse"/>
+      <wsdl:fault message="tns:EmployeeManagementServiceEmployeeManagementException" name="EmployeeManagementServiceEmployeeManagementException" wsaw:Action="urn:addEmployeeEmployeeManagementServiceEmployeeManagementException"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EmployeeManagementServiceSoap11Binding" type="tns:EmployeeManagementServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="getEmployeeDetails">
+      <soap:operation soapAction="urn:getEmployeeDetails" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="EmployeeManagementServiceEmployeeManagementException">
+        <soap:fault use="literal" name="EmployeeManagementServiceEmployeeManagementException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deleteEmployee">
+      <soap:operation soapAction="urn:deleteEmployee" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:fault name="EmployeeManagementServiceEmployeeManagementException">
+        <soap:fault use="literal" name="EmployeeManagementServiceEmployeeManagementException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addEmployee">
+      <soap:operation soapAction="urn:addEmployee" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="EmployeeManagementServiceEmployeeManagementException">
+        <soap:fault use="literal" name="EmployeeManagementServiceEmployeeManagementException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EmployeeManagementServiceSoap12Binding" type="tns:EmployeeManagementServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="getEmployeeDetails">
+      <soap12:operation soapAction="urn:getEmployeeDetails" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="EmployeeManagementServiceEmployeeManagementException">
+        <soap12:fault use="literal" name="EmployeeManagementServiceEmployeeManagementException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deleteEmployee">
+      <soap12:operation soapAction="urn:deleteEmployee" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:fault name="EmployeeManagementServiceEmployeeManagementException">
+        <soap12:fault use="literal" name="EmployeeManagementServiceEmployeeManagementException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addEmployee">
+      <soap12:operation soapAction="urn:addEmployee" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="EmployeeManagementServiceEmployeeManagementException">
+        <soap12:fault use="literal" name="EmployeeManagementServiceEmployeeManagementException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EmployeeManagementServiceHttpBinding" type="tns:EmployeeManagementServicePortType">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="getEmployeeDetails">
+      <http:operation location="getEmployeeDetails"/>
+      <wsdl:input>
+        <mime:content type="application/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="application/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteEmployee">
+      <http:operation location="deleteEmployee"/>
+      <wsdl:input>
+        <mime:content type="application/xml" part="parameters"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="addEmployee">
+      <http:operation location="addEmployee"/>
+      <wsdl:input>
+        <mime:content type="application/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="application/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EmployeeManagementService">
+    <wsdl:port name="EmployeeManagementServiceHttpSoap11Endpoint" binding="tns:EmployeeManagementServiceSoap11Binding">
+      <soap:address location="http://localhost:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap11Endpoint/"/>
+    </wsdl:port>
+    <wsdl:port name="EmployeeManagementServiceHttpSoap12Endpoint" binding="tns:EmployeeManagementServiceSoap12Binding">
+      <soap12:address location="http://localhost:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/"/>
+    </wsdl:port>
+    <wsdl:port name="EmployeeManagementServiceHttpEndpoint" binding="tns:EmployeeManagementServiceHttpBinding">
+      <http:address location="http://localhost:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpEndpoint/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap11Endpoint/</con:endpoint></con:endpoints><con:operation id="5bbc29f9-891a-4d36-a3c3-555e5f3a55c3" isOneWay="false" action="urn:addEmployee" name="addEmployee" bindingOperationName="addEmployee" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9e1d8cdd-883d-43ab-a176-a510b32519a0" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://sample.com/reservation/guest/types">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <typ:addEmployee>\r
+         <!--Optional:-->\r
+         <typ:name>VIDYA</typ:name>\r
+         <!--Optional:-->\r
+         <typ:id>456</typ:id>\r
+         <!--Optional:-->\r
+         <typ:Department>TEST</typ:Department>\r
+         <!--Optional:-->\r
+         <typ:age>24</typ:age>\r
+      </typ:addEmployee>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:addEmployee"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="71ba8d04-a00e-421c-b5a5-23166a7695ce" isOneWay="false" action="urn:deleteEmployee" name="deleteEmployee" bindingOperationName="deleteEmployee" type="One-Way" inputName="" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="508af309-d87f-4e17-ab75-850f624035ce" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://sample.com/reservation/guest/types">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <typ:deleteEmployee>\r
+         <!--Optional:-->\r
+         <typ:employeeName>?</typ:employeeName>\r
+      </typ:deleteEmployee>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:deleteEmployee"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="68e1d66f-0e88-4c28-be6d-c80ca28386f7" isOneWay="false" action="urn:getEmployeeDetails" name="getEmployeeDetails" bindingOperationName="getEmployeeDetails" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4da93417-5087-440a-98dc-e54218c92b63" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://sample.com/reservation/guest/types">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <typ:getEmployeeDetails>\r
+         <!--Optional:-->\r
+         <typ:employeeName>?</typ:employeeName>\r
+      </typ:getEmployeeDetails>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getEmployeeDetails"/></con:call></con:operation></con:interface><con:testSuite id="d5f0f7ac-6134-40be-a21b-6883a48149c9" name="TestSuite 1"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="ed897602-6023-48f9-a35b-519f65abc49e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TC1" searchProperties="true"><con:settings/><con:testStep type="request" name="SOAP Request 1" id="624d5f4c-6990-4715-81fb-7247bc249588"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EmployeeManagementServiceSoap12Binding</con:interface><con:operation>addEmployee</con:operation><con:request name="SOAP Request 1" id="f9af99ba-2fe2-4a08-9913-60eb57708bb3"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://sample.com/reservation/guest/types">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <typ:addEmployee>\r
+         <!--Optional:-->\r
+         <typ:name>raj</typ:name>\r
+         <!--Optional:-->\r
+         <typ:id>002</typ:id>\r
+         <!--Optional:-->\r
+         <typ:Department>DEV</typ:Department>\r
+         <!--Optional:-->\r
+         <typ:age>26</typ:age>\r
+      </typ:addEmployee>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="59c1cacb-3029-44f7-9f42-cb8cec6e3771"/><con:assertion type="XPath Match" id="cb3462db-2c26-4865-a3ef-0f53afab2c7e" name="XPath Match"><con:configuration/></con:assertion><con:assertion type="Sensitive Information Exposure" id="c49ace48-d09e-4b81-b364-e4c2f271d113" name="Sensitive Information Exposure"><con:configuration><IncludeProjectSpecific>true</IncludeProjectSpecific><IncludeGlobal>true</IncludeGlobal></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="SOAP Request 2" id="eb5684a3-89ef-4826-a11c-cba8da25fa54"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EmployeeManagementServiceSoap12Binding</con:interface><con:operation>deleteEmployee</con:operation><con:request name="SOAP Request 2" id="729a4c1b-ee92-41f2-8000-3647a0a2f17c"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://sample.com/reservation/guest/types">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <typ:deleteEmployee>\r
+         <!--Optional:-->\r
+         <typ:employeeName>raj</typ:employeeName>\r
+      </typ:deleteEmployee>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="SOAP Request 3" id="1852f897-693e-423b-a515-d70f51fdf23c"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EmployeeManagementServiceSoap12Binding</con:interface><con:operation>getEmployeeDetails</con:operation><con:request name="SOAP Request 3" id="7a7a049f-fec6-4124-89f9-9ee9ca2687bb"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://sample.com/reservation/guest/types">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <typ:getEmployeeDetails>\r
+         <!--Optional:-->\r
+         <typ:employeeName>SUHAS</typ:employeeName>\r
+      </typ:getEmployeeDetails>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="579bc9b5-e3c1-414b-91e7-d176a4dc233d"/><con:assertion type="XPath Match" id="d4ebedce-9da8-4f57-bb9c-afff35bc77c6" name="XPath Match"><con:configuration><path>declare namespace soapenv='http://www.w3.org/2003/05/soap-envelope';
+declare namespace ns='http://sample.com/reservation/guest/types';
+declare namespace ax21='http://exception.reservation.sample.com/xsd';
+//ns:age</path><content>2</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="Sensitive Information Exposure" id="5b3a9c31-2869-4d13-93c9-e39b28383072" name="Sensitive Information Exposure"><con:configuration><IncludeProjectSpecific>true</IncludeProjectSpecific><IncludeGlobal>true</IncludeGlobal></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:loadTest id="233e9309-df42-4858-aeb3-a3d3337338f6" name="LoadTest 1"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/><con:securityTest id="9e02cd19-14d0-4734-9439-700ab240b9a8" name="SecurityTest 1" failOnError="true"><con:settings/><con:testStepSecurityTest><con:testStepId>624d5f4c-6990-4715-81fb-7247bc249588</con:testStepId><con:testStepSecurityScan type="CrossSiteScriptingScan" name="Cross Site Scripting" id="1ccde9d7-7dcb-4bf1-992c-98e6362fed71" applyForFailedStep="false" disabled="false" runOnlyOnce="true"><con:settings/><con:config xsi:type="con:CrossSiteScriptingScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:parameterExposureStrings>&lt;PLAINTEXT></con:parameterExposureStrings><con:parameterExposureStrings>';alert(String.fromCharCode(88,83,83))//\';alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//\";alert(String.fromCharCode(88,83,83))//-->&lt;/SCRIPT>">'>&lt;SCRIPT>alert(String.fromCharCode(88,83,83))&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>'';!--"&lt;XSS>=&amp;{()}</con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT SRC=http://soapui.org/xss.js>&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC="javascript:alert('XSS');"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC=javascript:alert('XSS')></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC=JaVaScRiPt:alert('XSS')></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC=javascript:alert(&amp;quot;XSS&amp;quot;)></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC=`javascript:alert("RSnake says, 'XSS'")`></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG """>&lt;SCRIPT>alert("XSS")&lt;/SCRIPT>"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC=javascript:alert(String.fromCharCode(88,83,83))></con:parameterExposureStrings><con:parameterExposureStrings><![CDATA[<IMG SRC=&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;&#97;&#108;&#101;&#114;&#116;&#40;&#39;&#88;&#83;&#83;&#39;&#41;>]]></con:parameterExposureStrings><con:parameterExposureStrings><![CDATA[<IMG SRC=&#0000106&#0000097&#0000118&#0000097&#0000115&#0000099&#0000114&#0000105&#0000112&#0000116&#0000058&#0000097&#0000108&#0000101&#0000114&#0000116&#0000040&#0000039&#0000088&#0000083&#0000083&#0000039&#0000041>]]></con:parameterExposureStrings><con:parameterExposureStrings><![CDATA[<IMG SRC=&#x6A&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x70&#x74&#x3A&#x61&#x6C&#x65&#x72&#x74&#x28&#x27&#x58&#x53&#x53&#x27&#x29>]]></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC="jav	ascript:alert('XSS');"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC="jav&amp;#x09;ascript:alert('XSS');"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC="jav&amp;#x0A;ascript:alert('XSS');"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC="jav&amp;#x0D;ascript:alert('XSS');"></con:parameterExposureStrings><con:parameterExposureStrings>perl -e 'print "&lt;IMG SRC=java\0script:alert(\"XSS\")>";' > out</con:parameterExposureStrings><con:parameterExposureStrings>perl -e 'print "&lt;SCR\0IPT>alert(\"XSS\")&lt;/SCR\0IPT>";' > out</con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC=" &amp;#14;  javascript:alert('XSS');"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT/XSS SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;BODY onload!#$%&amp;()*~+-_.,:;?@[/|\]^`=alert("XSS")></con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT/SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;&lt;SCRIPT>alert("XSS");//&lt;&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT SRC=http://soapui.org/xss.js?&lt;B></con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT SRC=//ha.ckers.org/.j></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC="javascript:alert('XSS')"</con:parameterExposureStrings><con:parameterExposureStrings>&lt;iframe src=http://soapui.org/scriptlet.html &lt;</con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT>a=/XSS/alert(a.source)&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>\";alert('XSS');//</con:parameterExposureStrings><con:parameterExposureStrings>&lt;/TITLE>&lt;SCRIPT>alert("XSS");&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;INPUT TYPE="IMAGE" SRC="javascript:alert('XSS');"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;BODY BACKGROUND="javascript:alert('XSS')"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;BODY ONLOAD=alert('XSS')></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG DYNSRC="javascript:alert('XSS')"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG LOWSRC="javascript:alert('XSS')"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;BGSOUND SRC="javascript:alert('XSS');"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;BR SIZE="&amp;{alert('XSS')}"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;LAYER SRC="http://soapui.org/scriptlet.html">&lt;/LAYER></con:parameterExposureStrings><con:parameterExposureStrings>&lt;LINK REL="stylesheet" HREF="javascript:alert('XSS');"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;LINK REL="stylesheet" HREF="http://soapui.org/xss.css"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;STYLE>@import'http://soapui.org/xss.css';&lt;/STYLE></con:parameterExposureStrings><con:parameterExposureStrings>&lt;META HTTP-EQUIV="Link" Content="&lt;http://soapui.org/xss.css>; REL=stylesheet"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;STYLE>BODY{-moz-binding:url("http://soapui.org/xssmoz.xml#xss")}&lt;/STYLE></con:parameterExposureStrings><con:parameterExposureStrings>&lt;XSS STYLE="behavior: url(xss.htc);"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;STYLE>li {list-style-image: url("javascript:alert('XSS')");}&lt;/STYLE>&lt;UL>&lt;LI>XSS</con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC='vbscript:msgbox("XSS")'></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC="mocha:[code]"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC="livescript:[code]"></con:parameterExposureStrings><con:parameterExposureStrings>ï¿½scriptï¿½alert(ï¿½XSSï¿½)ï¿½/scriptï¿½</con:parameterExposureStrings><con:parameterExposureStrings>&lt;META HTTP-EQUIV="refresh" CONTENT="0;url=javascript:alert('XSS');"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;META HTTP-EQUIV="refresh" CONTENT="0;url=data:text/html;base64,PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4K"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;META HTTP-EQUIV="refresh" CONTENT="0; URL=http://;URL=javascript:alert('XSS');"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IFRAME SRC="javascript:alert('XSS');">&lt;/IFRAME></con:parameterExposureStrings><con:parameterExposureStrings>&lt;FRAMESET>&lt;FRAME SRC="javascript:alert('XSS');">&lt;/FRAMESET></con:parameterExposureStrings><con:parameterExposureStrings>&lt;TABLE BACKGROUND="javascript:alert('XSS')"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;TABLE>&lt;TD BACKGROUND="javascript:alert('XSS')"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;DIV STYLE="background-image: url(javascript:alert('XSS'))"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;DIV STYLE="background-image:\0075\0072\006C\0028'\006a\0061\0076\0061\0073\0063\0072\0069\0070\0074\003a\0061\006c\0065\0072\0074\0028.1027\0058.1053\0053\0027\0029'\0029"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;DIV STYLE="background-image: url(&amp;#1;javascript:alert('XSS'))"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;DIV STYLE="width: expression(alert('XSS'));"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;STYLE>@im\port'\ja\vasc\ript:alert("XSS")';&lt;/STYLE></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG STYLE="xss:expr/*XSS*/ession(alert('XSS'))"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;XSS STYLE="xss:expression(alert('XSS'))"></con:parameterExposureStrings><con:parameterExposureStrings>exp/*&lt;A STYLE='no\xss:noxss("*//*");xss:&amp;#101;x&amp;#x2F;*XSS*//*/*/pression(alert("XSS"))'></con:parameterExposureStrings><con:parameterExposureStrings>&lt;STYLE TYPE="text/javascript">alert('XSS');&lt;/STYLE></con:parameterExposureStrings><con:parameterExposureStrings>&lt;STYLE>.XSS{background-image:url("javascript:alert('XSS')");}&lt;/STYLE>&lt;A CLASS=XSS>&lt;/A></con:parameterExposureStrings><con:parameterExposureStrings>&lt;STYLE type="text/css">BODY{background:url("javascript:alert('XSS')")}&lt;/STYLE></con:parameterExposureStrings><con:parameterExposureStrings>&lt;!--[if gte IE 4]>&lt;SCRIPT>alert('XSS');&lt;/SCRIPT>&lt;![endif]--></con:parameterExposureStrings><con:parameterExposureStrings>&lt;BASE HREF="javascript:alert('XSS');//"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;OBJECT TYPE="text/x-scriptlet" DATA="http://soapui.org/scriptlet.html">&lt;/OBJECT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;OBJECT classid=clsid:ae24fdae-03c6-11d1-8b76-0080c744f389>&lt;param name=url value=javascript:alert('XSS')>&lt;/OBJECT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;EMBED SRC="http://soapui.org/xss.swf" AllowScriptAccess="always">&lt;/EMBED></con:parameterExposureStrings><con:parameterExposureStrings>&lt;EMBED SRC="data:image/svg+xml;base64,PHN2ZyB4bWxuczpzdmc9Imh0dH A6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcv MjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hs aW5rIiB2ZXJzaW9uPSIxLjAiIHg9IjAiIHk9IjAiIHdpZHRoPSIxOTQiIGhlaWdodD0iMjAw IiBpZD0ieHNzIj48c2NyaXB0IHR5cGU9InRleHQvZWNtYXNjcmlwdCI+YWxlcnQoIlh TUyIpOzwvc2NyaXB0Pjwvc3ZnPg==" type="image/svg+xml" AllowScriptAccess="always">&lt;/EMBED></con:parameterExposureStrings><con:parameterExposureStrings>a="get";b="URL(\"";c="javascript:";d="alert('XSS');\")";eval(a+b+c+d);</con:parameterExposureStrings><con:parameterExposureStrings><![CDATA[<XML ID=I><X><C><![CDATA[<IMG SRC="javas]]]]>><![CDATA[<![CDATA[cript:alert('XSS');">]]]]>><![CDATA[</C></X></xml><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>]]></con:parameterExposureStrings><con:parameterExposureStrings><![CDATA[<XML ID="xss"><I><B>&lt;IMG SRC="javas<!-- -->cript:alert('XSS')"&gt;</B></I></XML><SPAN DATASRC="#xss" DATAFLD="B" DATAFORMATAS="HTML"></SPAN>]]></con:parameterExposureStrings><con:parameterExposureStrings><![CDATA[<HTML><BODY><?xml:namespace prefix="t" ns="urn:schemas-microsoft-com:time"><?import namespace="t" implementation="#default#time2"><t:set attributeName="innerHTML" to="XSS&lt;SCRIPT DEFER&gt;alert(&quot;XSS&quot;)&lt;/SCRIPT&gt;"></BODY></HTML>]]></con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT SRC="http://soapui.org/xss.jpg">&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;? echo('&lt;SCR)';echo('IPT>alert("XSS")&lt;/SCRIPT>'); ?></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC="http://soapui.org/somecommand.php?somevariables=maliciouscode"></con:parameterExposureStrings><con:parameterExposureStrings>Redirect 302 /a.jpg http://soapui.org/admin.asp&amp;deleteuser</con:parameterExposureStrings><con:parameterExposureStrings>&lt;META HTTP-EQUIV="Set-Cookie" Content="USERID=&amp;lt;SCRIPT&amp;gt;alert('XSS')&amp;lt;/SCRIPT&amp;gt;"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;HEAD>&lt;META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=UTF-7"> &lt;/HEAD>+ADw-SCRIPT+AD4-alert('XSS');+ADw-/SCRIPT+AD4-</con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT a=">" SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT =">" SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT a=">" '' SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT "a='>'" SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT a=`>` SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT a=">'>" SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT>document.write("&lt;SCRI");&lt;/SCRIPT>PT SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings></con:config><con:assertion type="CrosSiteScript" id="01b407fa-9ec2-4cfc-9ecf-48204c696e1e" name="Cross Site Scripting Detection"><con:configuration/></con:assertion><con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:parameters label="SR1" parameterName="Request" xpath="" checked="true"/></con:checkedParameters><con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:strategy>ONE_BY_ONE</con:strategy><con:delay>100</con:delay></con:executionStrategy></con:testStepSecurityScan></con:testStepSecurityTest><con:properties/></con:securityTest></con:testCase><con:properties/></con:testSuite><con:testSuite id="c86a772b-e5c8-4f03-9e6b-cb5c0da74d6d" name="TestSuite 2"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="36f14b80-215d-4b2b-bfe7-37606783887a" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="addEmployee TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="076714d7-9118-4da2-b444-6450b5cc2836" name="addEmployee"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EmployeeManagementServiceSoap12Binding</con:interface><con:operation>addEmployee</con:operation><con:request name="addEmployee" id="4a09d0d5-d118-4ee3-b965-17a51bc2349b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://sample.com/reservation/guest/types">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <typ:addEmployee>\r
+         <!--Optional:-->\r
+         <typ:name>${#TestSuite#name}</typ:name>\r
+         <!--Optional:-->\r
+         <typ:id>${#TestSuite#id}</typ:id>\r
+         <!--Optional:-->\r
+         <typ:Department>${#TestSuite#dept}</typ:Department>\r
+         <!--Optional:-->\r
+         <typ:age>${#TestSuite#age}</typ:age>\r
+      </typ:addEmployee>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:addEmployee" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2b5e45d2-09e5-46c0-ae5e-83b53eb459ba" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="deleteEmployee TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="47aace7a-8b23-4455-b8da-027cd8489a2e" name="deleteEmployee"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EmployeeManagementServiceSoap12Binding</con:interface><con:operation>deleteEmployee</con:operation><con:request name="deleteEmployee" id="eef2647a-4605-4eef-bfed-e0c3f1399d25"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://sample.com/reservation/guest/types">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <typ:deleteEmployee>\r
+         <!--Optional:-->\r
+         <typ:employeeName>?</typ:employeeName>\r
+      </typ:deleteEmployee>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:deleteEmployee" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="8175ecee-4e72-42be-b857-d322fdae0c51" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="getEmployeeDetails TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="2a0a130c-40c2-41fb-b8d9-83792e2f6b9e" name="getEmployeeDetails"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EmployeeManagementServiceSoap12Binding</con:interface><con:operation>getEmployeeDetails</con:operation><con:request name="getEmployeeDetails" id="eee50b82-6094-4bc7-92f4-3bdc4a0cb9f6"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://sample.com/reservation/guest/types">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <typ:getEmployeeDetails>\r
+         <!--Optional:-->\r
+         <typ:employeeName>${#TestSuite#name}</typ:employeeName>\r
+      </typ:getEmployeeDetails>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="urn:getEmployeeDetails" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties><con:property><con:name>name</con:name><con:value>saikumar</con:value></con:property><con:property><con:name>id</con:name><con:value>45</con:value></con:property><con:property><con:name>dept</con:name><con:value>fdjkfd</con:value></con:property><con:property><con:name>age</con:name><con:value>56</con:value></con:property></con:properties></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
